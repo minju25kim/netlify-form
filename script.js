@@ -1,4 +1,4 @@
-let url = "https://contact-form-submitted.netlify.app/?name=Minju+Kim&email=minju%40minju.co.rk&company=foundersandcoders&message=this+is+test";
+let url = document.URL;
 
 // url will be document.URL
 
