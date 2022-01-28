@@ -20,14 +20,6 @@ for(let i=0;i<stringInfo.length;i++){
     submitted.appendChild(newDiv);
 }
 
-function arrayToString(array){
-    let stringValue ='';
-    array.forEach(element=>{
-        stringValue += ` ${element}`;
-    })
-    return stringValue;
-}
-
 function splitInfo(stringInfo){
     stringInfo.forEach(element=>{
         let splittedInfo = element.split('=');
@@ -38,10 +30,10 @@ function splitInfo(stringInfo){
     let email = valueArray[1].split('%40')
     let company=valueArray[2].split('+');
     let message = valueArray[3].split('+');
-    let nameValue = arrayToString(name);
-    let emailValue = arrayToString(email)
-    let companyValue = arrayToString(company)
-    let messageValue = arrayToString(message)
+    let nameValue = name.join(' ')
+    let emailValue = email.join('@')
+    let companyValue = company.join(' ')
+    let messageValue = message.join(' ')
     let value = [];
     value.push(nameValue,emailValue,companyValue,messageValue);
     return value;
